@@ -1,0 +1,29 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`Portfolio | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		
+		<main class="max-w-4xl mx-auto px-4 py-12">
+			<h1 class="text-4xl font-extrabold tracking-tight mb-4">Project Portfolio</h1>
+			<p class="text-lg text-zinc-400 mb-8">
+				A curated collection of my technical art, shader work, and 3D developments.
+			</p>
+			
+			<div class="border border-dashed border-zinc-800 rounded-2xl p-12 text-center text-zinc-500">
+				Your interactive 3D elements and project media grids will go right here.
+			</div>
+		</main>
+
+		<Footer />
+	</body>
+</html>
