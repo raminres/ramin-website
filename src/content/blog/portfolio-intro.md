@@ -1,9 +1,8 @@
 
 ---
-title: "Launching my Minimalist Showcase"
+title: "Testing Blog Content"
 description: "How I wired up automated deployments using Astro and Cloudflare Pages."
 pubDate: 2026-06-21
-heroImage: "/src/assets/blog-placeholder-1.jpg"
 ---
 
 # Hello World
