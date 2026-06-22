@@ -57,30 +57,32 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
 	<body>
 		<Header />
-		<main>
-			<article>
-				<div class="hero-image">
-					{heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
-				</div>
-				<div class="prose">
-					<div class="title">
-						<div class="date">
-							<FormattedDate date={pubDate} />
-							{
-								updatedDate && (
-									<div class="last-updated-on">
-										Last updated on <FormattedDate date={updatedDate} />
-									</div>
-								)
-							}
+		<main class="max-w-3xl mx-auto px-4 py-12">
+	<article class="w-full">
+		<div class="mb-8 border-b border-zinc-800 pb-8 text-center sm:text-left">
+			<div class="text-sm font-mono text-zinc-500 mb-2">
+				<FormattedDate date={pubDate} />
+				{
+					updatedDate && (
+						<div class="italic text-xs text-zinc-600 mt-1">
+							Updated on <FormattedDate date={updatedDate} />
 						</div>
-						<h1>{title}</h1>
-						<hr />
-					</div>
-					<slot />
-				</div>
-			</article>
-		</main>
+					)
+				}
+			</div>
+			<h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-100 mb-4">{title}</h1>
+		</div>
+
+		<div class="prose prose-zinc dark:prose-invert max-w-none 
+			prose-headings:text-zinc-100 prose-headings:font-bold prose-headings:tracking-tight
+			prose-p:text-zinc-300 prose-p:leading-relaxed
+			prose-a:text-blue-400 prose-a:no-underline hover:prose-a:underline
+			prose-code:text-zinc-200 prose-code:bg-zinc-900 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm
+			prose-pre:bg-zinc-900 prose-pre:border prose-pre:border-zinc-800">
+			<slot />
+		</div>
+	</article>
+</main>
 		<Footer />
 	</body>
 </html>
