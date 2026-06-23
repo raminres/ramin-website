@@ -1,63 +1,41 @@
-# Astro Starter Kit: Blog
+# Ramin Rasulzade — Personal Website & Tech Art Showcase
 
-```sh
-npm create astro@latest -- --template blog
-```
+Welcome to the repository for my personal portfolio and technical journal. This platform serves as a central hub for showcasing real-time graphics pipelines, shader implementation demos, and interactive 3D assets alongside an editorial log of my engineering processes.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Live Website: [raminrasulzade.com](https://raminrasulzade.com)
 
-Features:
+---
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and Open Graph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
+## 🎨 Dual Identity Philosophy
 
-## 🚀 Project Structure
+The core branding and architecture of this site are split down the middle to balance two distinct halves of my workflow:
+* **The Creative Side:** Fluid, calligraphic layouts, and smooth animations highlighting custom VFX, procedural modeling layouts, and real-time aesthetic choices.
+* **The Technical Side:** High-performance, monospaced data structures, and optimized layout architecture mirroring compiler logic and structured low-level graphics engines.
 
-Inside of your Astro project, you'll see the following folders and files:
+---
+
+## 🛠️ Tech Stack & Architecture
+
+This project is engineered for speed, high visual fidelity, and clean content editing without third-party overhead:
+
+* **Framework:** [Astro v6](https://astro.build) — Configured for modern server-side rendering pipelines and ultra-fast compilation.
+* **Style Engine:** [Tailwind CSS v4](https://tailwindcss.com) — Powered natively through Vite's fast compilation layers with zero old integration plugins.
+* **3D Viewports:** Google `<model-viewer>` — Embedded lightweight canvas layers rendering high-fidelity interactive GLTF/GLB formats directly on the home dashboard.
+* **Typography:** Tailwind Typography (`prose`) — Heavily tuned layout columns optimizing reading line lengths and deep neutral colors for text legibility.
+* **Hosting Pipeline:** Cloudflare Pages — Built directly over a modern `wrangler` worker edge ecosystem tracking the `develop` development branch for atomic deployments.
+
+---
+
+## 🚀 Project Layout Directory
 
 ```text
-├── public/
+├── public/                 # Static global assets (Custom favicons, 3D model .glb layers)
+│   └── images/             # Root target images served directly to the browser
 ├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-## Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+│   ├── components/         # Modular building blocks (Sleek unified Header and Footer)
+│   ├── content/            # Local content collections (Markdown and MDX journals)
+│   ├── layouts/            # Master layout page grids (Highly readable article wrappers)
+│   └── pages/              # Explicit application routing tree (Home, Blog, Portfolio)
+├── astro.config.mjs         # Streamlined framework and edge adapter setup
+├── package.json            # Strict dependency version controls
+└── wrangler.jsonc          # Cloudflare configuration configuration layer
