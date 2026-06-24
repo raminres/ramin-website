@@ -5,8 +5,10 @@ import Footer from '../../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 
-// Fetch and sort posts chronologically
-const posts = (await getCollection('blog')).sort(
+// Fetch all posts, but FILTER OUT any that have 'draft: true'
+const posts = (await getCollection('blog', ({ data }) => {
+	return data.draft !== true;
+})).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 ---
